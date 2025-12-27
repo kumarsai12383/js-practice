@@ -27,7 +27,7 @@ const pi = 3.14;
 console.log(pi); //used for constant values
 //pi = 3.1415; //error: assignment to constant variable
 
-//data types in js
+                                                                                //data types in js
 //1. Primitive data types
 //a. String - collection of characters or sequence of characters
 //b. Number - numeric values (integers and floating point numbers)
@@ -37,7 +37,7 @@ console.log(pi); //used for constant values
 //f. Symbol - unique and immutable value used as identifier
 //g. BigInt - used to represent integers larger than 2^53 - 1
 
-//a) String - collection of characters or sequence of characters
+                             //a) String - collection of characters or sequence of characters
 let firstName = "Kumar";
 let lastName = "Sai";
 console.log(firstName);
@@ -48,9 +48,9 @@ console.log(cancatenatedString);
 // to add two strings we also use templite literals
 let fullName = `${firstName} ${lastName}`;
 console.log(fullName);
-//we use ${variable name here} to add variable in the string
+ //we use ${variable name here} to add variable in the string
 
-//we have some inbuilt methods in strings
+                                                           //we have some inbuilt methods in strings
 console.log(fullName.length); //length method to find the length of the string starts from 1 to end of the length
 console.log(fullName.toUpperCase()); //toUpperCase method to convert string to uppercase (all letters to capital letters)
 console.log(fullName.toLowerCase()); //toLowerCase method to convert string to lowercase (all letters to small letters)
