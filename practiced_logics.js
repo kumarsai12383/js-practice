@@ -1,4 +1,4 @@
-//simple login form with OTP verification
+// //simple login form with OTP verification
 let userName1 = prompt("Enter your name:");
 let password = prompt("Enter your password:");
 if (userName1.length === 0 && password.length === 0) {
@@ -25,7 +25,7 @@ if (userName1.length === 0 && password.length === 0) {
   alert("Please enter a valid password with letters and numbers");
 }
 
-                                            // maskEmail function
+// maskEmail function
 function maskEmail(email) {
   let atindex =
     email[0] +
@@ -40,3 +40,41 @@ console.log(maskEmail("apple.pie@example.com"));
 console.log(maskEmail("freecodecamp@example.com"));
 console.log(maskEmail("info@test.dev"));
 console.log(maskEmail("user@domain.org"));
+
+//Loan eligibility checker
+const minIncomeForDuplex = 60000;
+const minCreditScoreForDuplex = 700;
+
+const minIncomeForCondo = 45000;
+const minCreditScoreForCondo = 680;
+
+const minIncomeForCar = 30000;
+const minCreditScoreForCar = 650;
+
+function getLoanMessage(annualIncome, creditScore) {
+  if (
+    annualIncome >= minIncomeForDuplex &&
+    creditScore >= minCreditScoreForDuplex
+  ) {
+    return "You qualify for a duplex, condo, and car loan.";
+  } else if (
+    annualIncome >= minIncomeForCondo &&
+    creditScore >= minCreditScoreForCondo
+  ) {
+    return "You qualify for a condo and car loan.";
+  } else if (
+    annualIncome >= minIncomeForCar &&
+    creditScore >= minCreditScoreForCar
+  ) {
+    return "You qualify for a car loan.";
+  } else {
+    return "You don't qualify for any loans.";
+  }
+}
+
+console.log(getLoanMessage(75000, 720)); // You qualify for a duplex, condo, and car loan.
+console.log(getLoanMessage(50000, 690)); // You qualify for a condo and car loan.
+console.log(getLoanMessage(35000, 660)); // You qualify for a car loan.
+console.log(getLoanMessage(25000, 600)); // You don't qualify for any loans.
+
+
