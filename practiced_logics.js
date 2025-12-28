@@ -24,3 +24,19 @@ if (userName1.length === 0 && password.length === 0) {
 ) {
   alert("Please enter a valid password with letters and numbers");
 }
+
+                                            // maskEmail function
+function maskEmail(email) {
+  let atindex =
+    email[0] +
+    "*".repeat(email.slice(email[1], email.indexOf("@") - 1).length - 1) +
+    email[email.indexOf("@") - 1] +
+    email.slice(email.indexOf("@"));
+  return atindex;
+}
+let email = "Kumarsai@gmail.com";
+console.log(maskEmail(email));
+console.log(maskEmail("apple.pie@example.com"));
+console.log(maskEmail("freecodecamp@example.com"));
+console.log(maskEmail("info@test.dev"));
+console.log(maskEmail("user@domain.org"));
