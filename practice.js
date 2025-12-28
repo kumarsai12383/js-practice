@@ -79,4 +79,5 @@ console.log(fullName.split(" "));
 let helo = "hello world";
 let convert = helo[0].toUpperCase() + helo.slice(1, 6) + helo[6].toUpperCase() + helo.slice(7);
 console.log(convert);
-console.log(convert.startsWith("H"))
+console.log(convert.startsWith("H")) //startsWith method to check if the string starts with a particular substring returns boolean value
+console.log(convert.endsWith("D")) //endsWith method to check if the string ends with a particular substring returns boolean value
