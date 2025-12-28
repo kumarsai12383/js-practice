@@ -56,6 +56,9 @@ console.log(fullName.toUpperCase()); //toUpperCase method to convert string to u
 console.log(fullName.toLowerCase()); //toLowerCase method to convert string to lowercase (all letters to small letters)
 console.log(fullName.includes("Kumar")); //includes method to check if a substring is present in the string or not returns boolean value
 console.log(fullName.replace("Kumar", "Makthala")); //replace method to replace a substring with another substring in the string (output will be Makthala Sai)
+let javaScript = "I love JavaScript and learning JavaScript is fun";
+console.log(javaScript.replace("JavaScript", "Python")); //replace method to replace only the first occurrences of a substring with another substring in the string (output will be I love Python and learning JavaScript is fun)
+console.log(javaScript.replaceAll("JavaScript", "Python")); //replaceAll method to replace all occurrences of a substring with another substring in the string (output will be I love Python and learning Python is fun)
 //we use repeat(n) method to repeat the string n number of times
 let name = "Kumar ";
 console.log(name.repeat(3)); //repeat method to repeat the string 3 times
