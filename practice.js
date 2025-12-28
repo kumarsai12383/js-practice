@@ -75,3 +75,8 @@ console.log(fullName.indexOf("S")); //indexOf method to find the index of a part
 console.log(fullName.slice(0, 5)); //slice method to extract a part of the string from index 0 to 4 (5 is not included)
 console.log(fullName.split(" "));
 //split method to split the string into an array of substrings based on a specified separator (by default it splits based on space)
+
+let helo = "hello world";
+let convert = helo[0].toUpperCase() + helo.slice(1, 6) + helo[6].toUpperCase() + helo.slice(7);
+console.log(convert);
+console.log(convert.startsWith("H"))
