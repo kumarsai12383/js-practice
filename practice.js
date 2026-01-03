@@ -182,6 +182,11 @@
 // // } else {
 // //   console.log("Fail");
 // // }
+//we have another operator called ternary operator to perform conditional statements in a single line
+// //syntax: condition ? expression1 : expression2
+// let age = 20;
+// let eligibility = age >= 18 ? "Eligible to vote" : "Not eligible to vote";
+// console.log(eligibility); //output will be "Eligible to vote"
 // // //we can use switch case to check multiple conditions
 // // // (switch case conditions are not allowed to be boolean values like in if else statements)
 // // let day = "monday";
@@ -211,6 +216,26 @@
 // // console.log(typeof undefVar); //output will be undefined
 //-----------------------------------------------------------------------------------------------------2.Non-primitive data types
 //-------------------------------------------------------------------------------------------------1)Functions in JS
+// //Functions are blocks of code that perform a specific task
+// //Functions are reusable and can be called multiple times
+// //Functions can take input parameters and return output values
+// //Functions can have default parameters
+// //Functions can have rest parameters
+// //Functions can have optional parameters
+// //Functions can have anonymous functions
+//                                      //Function declaration
+// function greet(name) {
+//   return `Hello, ${name}!`;
+// }
+// console.log(greet("Kumar")); //output will be "Hello, Kumar!" here we are calling the function with argument "Kumar" where name parameter will take the value "Kumar"
+//                                        //Function expression
+// const add = function (a, b) {
+//   return a + b;
+//};
+// console.log(add(5, 10)); //output will be 15
+//                                        //Arrow function
+// const multiply = (a, b) => a * b;
+// console.log(multiply(5, 10)); //output will be 50
 // //--------------------------------------------------------------------------------------------------------2)Arrays in js
 // //we use array to store multiple values in a single variable
 // let fruits = ["apple", "banana", "orange", "mango"];
@@ -270,7 +295,101 @@
 // console.log(matrix);
 // console.log(matrix[0][0]); //accessing first element of the first array
 // console.log(matrix[1][2]); //accessing third element of the second array
+// -------------------------------------------------------------------------------------3)Objects in js
+// //Objects are used to store multiple key-value pairs in a single variable
+// //Objects are used to represent real-world entities
+// //Objects can have properties and methods
+// let person = {
+//   name: "Kumar",
+//   age: 25,
+//   isStudent: true,
+// };
+console.log(person);
+console.log(person.name); //accessing property of the object using dot notation
+console.log(person["age"]); //accessing property of the object using bracket notation
+person.age = 26; //updating property of the object
+person.gender = "male"; //adding new property to the object
+console.log(person);
+//we can delete a property from the object using delete keyword
+delete person.isStudent;
+console.log(person);
+//we can also use object destructuring to assign each property to a each variable
+let { name, age, gender } = person;
+//By this we can assign the values of name, age and gender properties to the respective variables
+console.log(name);
+console.log(age);
+console.log(gender);
+//we can also assign default values to the variables while destructuring
+let { name: personName, age: personAge, isStudent: studentStatus = false } = person;
+console.log(personName);
+console.log(personAge);
+console.log(studentStatus); //output will be false as isStudent property is deleted from the object
+//we have a operator called optional chaining operator (?.) to access nested properties of an object
+//it returns undefined if the property and respected nested properties is not present instead of throwing an error
+let person = {
+  name: "Kumar",
+  age: 25,
+  isStudent: true,
+  location: {
+    home: "Parllapalli[V],vidavalur[M],Nellore[D],Andhra Pradesh[AP]",
+    college: "Nellore,Andhra Pradesh[AP]",
+  },
+};
+// console.log(person.stay.work) //It will give error as stay and work property is not present in the object
+// // but if we use optional chaining operator it will return undefined instead of error
+// console.log(person?.stay?.work); //output will be undefined because stay property is not present in the object
+// //we have another operator called in operator to check if a particular property is present in the object or not returns boolean value
+// console.log("name" in person); //output will be true
+// console.log("gender" in person); //output will be false
 
+//---------------------------------------------------------------------------------------------------// Recipe Management System
+// const recipes = [];
+// const recipe1 = {
+//   name: "Spaghetti Carbonara",
+//   ingredients: ["spaghetti", "Parmesan cheese", "pancetta", "black pepper"],
+//   cookingTime: 22
+// };
+// const recipe2 = {
+//   name: "Chicken Curry",
+//   ingredients: ["chicken breast", "coconut milk", "curry powder", "onion", "garlic"],
+//   cookingTime: 42
+// };
+// const recipe3 = {
+//   name: "Vegetable Stir Fry",
+//   ingredients: ["broccoli", "carrot", "bell pepper"],
+//   cookingTime: 15
+// };
+// recipes.push(recipe1, recipe2, recipe3);
+// console.log(recipes[1].ingredients);
 
+// let price = 2000;
+// let increasedPriceValue = 26; //10% increase
+// let increasedPrice = price + (price * increasedPriceValue) / 100;
+// console.log(increasedPrice);
 
+// if( increasedPrice === price){
+//     console.log("price is Normal")
+//     console.log(`Price is ${increasedPrice}`);
+//     ;
+// }
+// else if (increasedPrice <=2200) {
+//   console.log(`Price is increased by ${increasedPriceValue}%`);
+//   console.log("increased price is:", increasedPrice);
+// } else if (increasedPrice <= 2400) {
+//   console.log(`Price is increased by ${increasedPriceValue}%`);
+//   console.log("increased price is:", increasedPrice);
+// } else if (increasedPrice <= 2600) {
+//   console.log(`Price is increased by ${increasedPriceValue}%`);
+//   console.log("increased price is:", increasedPrice);
+// }
+
+let obj = {
+  ingredients:{
+    flour: "2 cups",
+    sugar: "1 cup",
+    eggs: "2",
+    milk: "1 cup"
+  }
+}
+console.log(obj.ingredients.hasOwnProperty(sugar));
 
