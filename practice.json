@@ -1,0 +1,22 @@
+{
+    "name":"kumarsai",
+    "age":21,
+    "phone":{
+        "mobile":"9876543210",
+        "home":"0123456789"
+    },
+    "address":[
+        {
+            "street":"123 Main St",
+            "city":"Anytown",
+            "state":"CA",
+            "zip":"12345"
+        },
+        {
+            "street":"456 Oak St",
+            "city":"Othertown",
+            "state":"TX",
+            "zip":"67890"
+        }
+    ]
+}
