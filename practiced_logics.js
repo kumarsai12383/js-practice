@@ -26,20 +26,20 @@
 // }
 
 // //----------------------------------------------------------------------------------------------// maskEmail function
-// function maskEmail(email) {
-//   let atindex =
-//     email[0] +
-//     "*".repeat(email.slice(email[1], email.indexOf("@") - 1).length - 1) +
-//     email[email.indexOf("@") - 1] +
-//     email.slice(email.indexOf("@"));
-//   return atindex;
-// }
-// let email = "Kumarsai@gmail.com";
-// console.log(maskEmail(email));
-// console.log(maskEmail("apple.pie@example.com"));
-// console.log(maskEmail("freecodecamp@example.com"));
-// console.log(maskEmail("info@test.dev"));
-// console.log(maskEmail("user@domain.org"));
+function maskEmail(email) {
+  let atindex =
+    email[0] +
+    "*".repeat(email.slice(email[1], email.indexOf("@")-1).length - 1) +
+    email[email.indexOf("@") - 1] +
+    email.slice(email.indexOf("@"));
+  return atindex;
+}
+let email = "Kumarsai@gmail.com";
+console.log(maskEmail(email));
+console.log(maskEmail("apple.pie@example.com"));
+console.log(maskEmail("freecodecamp@example.com"));
+console.log(maskEmail("info@test.dev"));
+console.log(maskEmail("user@domain.org"));
 
 // //--------------------------------------------------------------------------------------------//Loan eligibility checker
 // const minIncomeForDuplex = 60000;
@@ -155,38 +155,39 @@
 //     alert("Invalid operator");
 // }
 // //----------------------------------------------------------------------------------------------------// Age calculator
-// let userDOB = Number(prompt("Enter your DOB in (YYYY) format:"));
-// let convertDOB = String(userDOB);
-// let age = 2026 - userDOB;
-// if (convertDOB.length === 4 && userDOB < 2026) {
-//   alert(`Your age is ${age}`);
-// } else if (convertDOB.length !== 4) {
-//   alert("Please enter a valid DOB in (YYYY) format");
-// } else if (userDOB >= 2026) {
-//   alert("You are not born yet lol");
-// } else {
-//   alert("Invalid DOB");
-// }
+let userDOB = Number(prompt("Enter your DOB in (YYYY) format:"));
+let convertDOB = String(userDOB);
+let age = 2026 - userDOB;
+if (convertDOB.length === 4 && userDOB < 2026) {
+  alert(`Your age is ${age}`);
+} else if (convertDOB.length !== 4) {
+  alert("Please enter a valid DOB in (YYYY) format");
+} else if (userDOB >= 2026) {
+  alert("You are not born yet lol");
+} else {  
+  alert("Invalid DOB"); 
+} 
 
-//-------------------------------------------------------Vowels and consonants counter
-// function getVowelCount(str) {
-//   const vowels = 'aeiou';
-//   let vowelscount = 0;
-//   let consonantsCount = 0;
-//   for (let char of str.toLowerCase()) {
-//     if (vowels.includes(char)) {
-//       vowelscount++;
-//     }
-//     else if(!vowels.includes(char) && char >="a" && char <= "z"){
-//       consonantsCount++;
-//     }
-//   }
-//   let count = {
-//     vowels: vowelscount,
-//     consonants: consonantsCount
-//   }
-//   return count;
-// }
-// console.log(getVowelCount("Hello World")); 
+// -------------------------------------------------------Vowels and consonants counter 
+function getVowelCount(str) {
+  const vowels = 'aeiou';
+  let vowelscount = 0;
+  let consonantsCount = 0;
+  for (let char of str.toLowerCase()) {
+    if (vowels.includes(char)) {  
+      vowelscount++;
+    }
+    else if(!vowels.includes(char) && char >="a" && char <= "z"){
+      consonantsCount++;
+    }
+  }
+  let count = {
+    vowels: vowelscount,
+    consonants: consonantsCount
+  }
+  return count;
+}
+console.log(getVowelCount("Hello World")); 
 
-// console.log(getVowelCount("Programming is fun"));
+console.log(getVowelCount("Programming is fun"));
+
