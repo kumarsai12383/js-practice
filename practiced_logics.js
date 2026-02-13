@@ -26,7 +26,7 @@
 // }
 
 // //----------------------------------------------------------------------------------------------// maskEmail function
-function maskEmail(email) {
+function maskEmail(email) {  
   let atindex =
     email[0] +
     "*".repeat(email.slice(email[1], email.indexOf("@")-1).length - 1) +
