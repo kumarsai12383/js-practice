@@ -130,7 +130,7 @@
 // // // console.log(nanResult); //output will be NaN
 
 // // // //we have some Math methods in js
-// // // console.log(Math.round(4.6)); //Math.round() method to round a number to the nearest integer
+// console.log(Math.round(4.6)); //Math.round() method to round a number to the nearest integer
 // // // console.log(Math.floor(4.9)); //Math.floor() method to round a number down to the nearest integer
 // // // console.log(Math.ceil(4.1)); //Math.ceil() method to round a number up to the nearest integer
 // // // console.log(Math.sqrt(16)); //Math.sqrt() method to find the square root of a Number
@@ -261,20 +261,20 @@
 // // //slice method to extract a part of the array from index 1 to 3 (4 is not included)
 // // console.log(subArray);
 // // //splice() method to add or remove elements from the array
-// // let newArr = [
-// //   "apple",
-// //   "banana",
-// //   "pine",
-// //   "orange",
-// //   "mango",
-// //   "grape",
-// //   "kiwi",
-// //   "carrot",
-// //   "potato",
-// //   "tomato",
-// // ];
-// // let splice = newArr.splice(1, 1, "fruit1", "fruit2");
-// // console.log(newArr); //it will remove 1 element from index 1 and add fruit1 and fruit2 at index 1
+let newArr = [
+  "apple",
+  "banana",
+  "pine",
+  "orange",
+  "mango",
+  "grape",
+  "kiwi",
+  "carrot",
+  "potato",
+  "tomato",
+];
+let splice = newArr.splice(2, 0, "fruit1", "fruit2");
+console.log(newArr); //it will remove 1 element from index 1 and add fruit1 and fruit2 at index 1
 // // allItems.sort(); //sort method to sort the elements of the array in ascending order
 // // console.log(allItems);
 // // allItems.reverse(); //reverse method to reverse the order of the elements in the array
@@ -287,14 +287,27 @@
 // // console.log(color3);
 
 // // //we have another type array called multidimensional array
-// // let matrix = [
-// //   [1, 2, 3],
-// //   [4, 5, 6],
-// //   [7, 8, 9],
-// // ];
-// // console.log(matrix);
-// // console.log(matrix[0][0]); //accessing first element of the first array
-// // console.log(matrix[1][2]); //accessing third element of the second array
+// let matrix = [
+//   [1, 2, 3],
+//   [4, 5, 6],
+//   [7, 8, 9],
+// ];
+// console.log(matrix);
+// console.log(matrix[0][0]); //accessing first element of the first array
+// console.log(matrix[1][2]); //accessing third element of the second array
+// //we can also merge two arrays using spread operator
+// let array1 = ["apple", "banana", "orange"];
+// let array2 = ["grape", "kiwi", "melon"];
+// let mergedArray = [...array1, ...array2];
+// console.log(mergedArray);
+// //we can also use spread operator to copy an array
+// let copiedArray = [...array1];
+// console.log(copiedArray);
+// Rest operator is used to collect the remaining elements of an array into a new array
+// let [first, second, ...rest] = mergedArray;
+// console.log(first);
+// console.log(second);
+// console.log(rest);
 // // -------------------------------------------------------------------------------------3)Objects in js
 // // //Objects are used to store multiple key-value pairs in a single variable
 // // //Objects are used to represent real-world entities
@@ -335,7 +348,7 @@
 //     college: "Nellore,Andhra Pradesh[AP]",
 //   },
 // };
-// // console.log(person.stay.work) //It will give error as stay and work property is not present in the object
+// // console.log(person.stay.work) //It will give error as stay and work property is not present in the object, Causes application to crash and stop the execution of the code.
 // // // but if we use optional chaining operator it will return undefined instead of error
 // // console.log(person?.stay?.work); //output will be undefined because stay property is not present in the object
 // // //we have another operator called in operator to check if a particular property is present in the object or not returns boolean value
@@ -391,24 +404,24 @@
 //     milk: "1 cup"
 //   }
 // }
-// console.log(obj.ingredients.hasOwnProperty(sugar));
+// console.log(obj.ingredients.hasOwnProperty("sugar"));
 
-function getVowelCount(str) {
-  const vowels = 'aeiou';
-  let vowelscount = 0;
-  let consonantsCount = 0;
-  for (let char of str.toLowerCase()) {
-    if (vowels.includes(char)) {
-      vowelscount++;
-    }
-    else if(!vowels.includes(char) && char >="a" && char <= "z"){
-      consonantsCount++;
-    }
-  }
-  let count = {
-    vowels: vowelscount,
-    consonants: consonantsCount
-  }
-  return count;
-}
-console.log(getVowelCount("Hello World")); // Output: 3
+// function getVowelCount(str) {
+//   const vowels = 'aeiou';
+//   let vowelscount = 0;
+//   let consonantsCount = 0;
+//   for (let char of str.toLowerCase()) {
+//     if (vowels.includes(char)) {
+//       vowelscount++;
+//     }
+//     else if(!vowels.includes(char) && char >="a" && char <= "z"){
+//       consonantsCount++;
+//     }
+//   }
+//   let count = {
+//     vowels: vowelscount,
+//     consonants: consonantsCount
+//   }
+//   return count;
+// }
+// console.log(getVowelCount("Hello World")); // Output: 3

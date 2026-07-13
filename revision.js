@@ -1,8 +1,25 @@
-let senctence = "I love JS in 2024";
-let count = 0;
-for (const character of senctence) {
-    if (character === " ") {
-        count++;
-    }
-}
-console.log(count + 1);
+let items = [
+  {
+    id: 1,
+    name: "Item 1",
+    category: "Category A",
+    description: "This is the first item.",
+  },
+  {
+    id: 2,
+    name: "Item 2",
+    category: "Category B",
+    description: "This is the second item.",
+  },
+  {
+    id: 3,
+    name: "Item 3",
+    category: "Category A",
+    description: "This is the third item.",
+  },
+];
+
+let categoryA = items.find((item) => {
+  return item.category === "Category A";
+});
+console.log(categoryA);

@@ -1,0 +1,64 @@
+.hero-page {
+  background-color: rgb(41, 142, 118);
+  color: aliceblue !important;
+}
+.navbar-nav {
+  margin-left: auto;
+  color: aliceblue !important;
+}
+.navbar-brand {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.hover-links:hover {
+  color: rgb(127, 167, 27) !important;
+}
+.bg-container {
+  width: 100vw;
+  height: 100vh;
+}
+.heading {
+  font-size: 50px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.btn-learn {
+  background-color: rgb(127, 167, 27);
+  color: aliceblue;
+  border: none;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  padding: 8px 19px;
+  width: auto;
+  height: auto;
+}
+#login-hide{
+  display: none;
+}
+.login-card {
+  text-align: end;
+  display: block;
+  width: 320px;
+  padding: 20px;
+  border-radius: 5px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#register-hide {
+  display: none;
+}
+.register-card {
+  text-align: end;
+  display: block;
+  width: 320px;
+  padding: 20px;
+  border-radius: 5px;
+  margin-left: auto;
+  margin-right: auto;
+}
+input {
+  margin: 10px 0;
+  padding: 8px;
+}
+#section1{
+    width: 100%;
+    height: 100vh;
+    background-color:aliceblue;
+}
