@@ -1,12 +1,18 @@
-let first_number = 80;
-let second_number = 20;
-let third_number = 100;
-if (first_number > second_number && first_number > third_number) {
-  console.log("The first number is the largest.");
+let array = [7,7,7,10];
+let largest = array[0];
+let secondLargest = array[0];
+for (let i = 0; i < array.length; i++) {
+    if (array[i] > largest) {
+        secondLargest = largest;
+        largest = array[i];
+    } else if (array[i] > secondLargest && array[i] < largest) {
+        secondLargest = array[i];
+    }
 }
-if (second_number > first_number && second_number > third_number) {
-  console.log("The second number is the largest.");
-}
-if (third_number > first_number && third_number > second_number) {
-  console.log("The third number is the largest.");
+
+if (secondLargest === largest) {
+  console.log("There is no second largest number in the array.");
+} else {
+  console.log(largest);
+  console.log(secondLargest);
 }
