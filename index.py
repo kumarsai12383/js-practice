@@ -19,10 +19,15 @@
 #     temp = temp // 10
 # print(f"Digits that are repeated: {listes}")
 
-n = 8
-for i in range(1, n + 1):
-    for j in range(1, i + 1):
-        star = '* ' * i
-        space = ' ' * (n - i)
-    print(space + star, end=' ')
-    print()
+# n = 8
+# for i in range(1, n + 1):
+#         star = '* ' * i
+#         space = ' ' * (n - i)
+#         print(space + star, end=' ')
+#         print()
+
+
+def greet(name = "there", greet="Hello"):
+    print(f"Hello, {name}! {greet}")
+kumar = "Kumar"
+greet(kumar)

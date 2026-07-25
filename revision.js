@@ -1,18 +1,10 @@
-let array = [7,7,7,10];
-let largest = array[0];
-let secondLargest = array[0];
-for (let i = 0; i < array.length; i++) {
-    if (array[i] > largest) {
-        secondLargest = largest;
-        largest = array[i];
-    } else if (array[i] > secondLargest && array[i] < largest) {
-        secondLargest = array[i];
+function list(list){
+  let result = [];
+  for(let item of list){
+    if(typeof item === 'number' && !isNaN(item)){
+      result.push(item * item);
     }
+  }
+  return result;
 }
-
-if (secondLargest === largest) {
-  console.log("There is no second largest number in the array.");
-} else {
-  console.log(largest);
-  console.log(secondLargest);
-}
+console.log(list([1, 2, 3, 'a', 'b', 4]));
