@@ -19,5 +19,5 @@ int main ()
     printf("name: ");
     printf("%s",s1.name);
     printf("marks: ");
-    printf("%f",s1.marks);
+    printf("%0.2f",s1.marks);
 }
