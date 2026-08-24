@@ -1,0 +1,11 @@
+.toggle_btn{
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+.dark-mode{
+    background-color: #333;
+    color: white;
+}
